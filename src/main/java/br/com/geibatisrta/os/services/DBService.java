@@ -69,15 +69,15 @@ public class DBService {
 		Cliente c20 = new Cliente(null, "Vitor Martin Isaac Aragão", "399.602.861-00", "(60) 64307-9924");
 		
 		OS os1 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t1, c1);
-		OS os2 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t2, c3);
-		OS os3 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t4, c11);
-		OS os4 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t20, c19);
+		OS os2 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ABERTO, t2, c3);
+		OS os3 = new OS(null, Prioridade.BAIXA, "Teste OS", Status.ENCERRADO, t4, c11);
+		OS os4 = new OS(null, Prioridade.MEDIA, "Teste OS", Status.ANDAMENTO, t20, c19);
 		OS os5 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t10, c18);
-		OS os6 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t5, c11);
-		OS os7 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t8, c18);
-		OS os8 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t7, c7);
+		OS os6 = new OS(null, Prioridade.BAIXA, "Teste OS", Status.ABERTO, t5, c11);
+		OS os7 = new OS(null, Prioridade.BAIXA, "Teste OS", Status.ABERTO, t8, c18);
+		OS os8 = new OS(null, Prioridade.MEDIA, "Teste OS", Status.ABERTO, t7, c7);
 		OS os9 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t11, c8);
-		OS os10 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t18, c20);
+		OS os10 = new OS(null, Prioridade.MEDIA, "Teste OS", Status.ENCERRADO, t18, c20);
 		OS os11 = new OS(null, Prioridade.ALTA, "Teste OS", Status.ANDAMENTO, t20, c16);
 
 		t1.getList().add(os1);
@@ -94,6 +94,6 @@ public class DBService {
 
 		tecnicoRepository.saveAll(Arrays.asList(t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20));
 		clienteRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20));
-		osRepository.saveAll(Arrays.asList(os1));
+		osRepository.saveAll(Arrays.asList(os1, os2, os3, os4, os5, os6, os7, os8, os9, os10, os11));
 	}
 }
